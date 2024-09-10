@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assignment_7.Enums;
+using Assignment_7.Managers;
 
-namespace Assignment_7
+namespace Assignment_7.HandleExercise
 {
     internal class CalculateExercise
     {
@@ -35,13 +32,13 @@ namespace Assignment_7
 
         public void CopyExerciseList(List<Exercise> exerciseList)
         {
-            foreach (Exercise exercise in exerciseList) 
+            foreach (Exercise exercise in exerciseList)
             {
-                if(exercise.Type == ExerciseType.Squat)
+                if (exercise.Type == ExerciseType.Squat)
                 {
                     allSquats.Add(exercise);
                 }
-                else if(exercise.Type == ExerciseType.Bench)
+                else if (exercise.Type == ExerciseType.Bench)
                 {
                     allBenches.Add(exercise);
                 }
@@ -57,7 +54,7 @@ namespace Assignment_7
             {
                 totalSquats += item.RepWeight;
             }
-            foreach(var item in allBenches)
+            foreach (var item in allBenches)
             {
                 totalBenches += item.RepWeight;
             }
@@ -99,11 +96,11 @@ namespace Assignment_7
         public void LeftToReachGoal(User user)
         {
             double left = 0;
-            if(user.GoalUnit == UnitType.Percent)
+            if (user.GoalUnit == UnitType.Percent)
             {
-                user.GoalSquat = (user.GoalSquat / 100) * user.BodyWeight;
-                user.GoalBench = (user.GoalBench / 100) * user.BodyWeight;
-                user.GoalDeadlift = (user.GoalDeadlift / 100) * user.BodyWeight;
+                user.GoalSquat = user.GoalSquat / 100 * user.BodyWeight;
+                user.GoalBench = user.GoalBench / 100 * user.BodyWeight;
+                user.GoalDeadlift = user.GoalDeadlift / 100 * user.BodyWeight;
             }
 
             if (maxSquats < user.GoalSquat)
@@ -142,7 +139,7 @@ namespace Assignment_7
         }
         public void TimesLiftedBodyWeight(User user)
         {
-            timesLiftedBodyWeight = total / user.BodyWeight; 
+            timesLiftedBodyWeight = total / user.BodyWeight;
         }
         public void AmountOfRepetitions()
         {

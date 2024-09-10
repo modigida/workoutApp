@@ -1,7 +1,7 @@
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Serialization;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Assignment_7.Enums;
+using Assignment_7.Files;
+using Assignment_7.HandleExercise;
+using Assignment_7.Managers;
 
 namespace Assignment_7
 {

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic; 
+﻿using Assignment_7.Enums;
 
-namespace Assignment_7
+namespace Assignment_7.Managers
 {
     internal class Exercise
     {
@@ -13,7 +8,7 @@ namespace Assignment_7
         private ExerciseType type;
         public Exercise()
         {
-            
+
         }
         public Exercise(ExerciseType type, double repWeight)
         {
@@ -33,7 +28,7 @@ namespace Assignment_7
 
         public override string ToString()
         {
-            string strOut = String.Format("{0,20} {1,30}", Type, RepWeight);
+            string strOut = string.Format("{0,20} {1,30}", Type, RepWeight);
             return strOut;
         }
     }

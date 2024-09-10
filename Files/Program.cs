@@ -1,4 +1,4 @@
-namespace Assignment_7
+namespace Assignment_7.Files
 {
     internal static class Program
     {

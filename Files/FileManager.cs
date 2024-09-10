@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assignment_7.Enums;
+using Assignment_7.Managers;
 
-namespace Assignment_7
+namespace Assignment_7.Files
 {
     internal class FileManager
     {
@@ -30,7 +27,7 @@ namespace Assignment_7
                 string versionTest = reader.ReadLine();
                 double version = double.Parse(reader.ReadLine());
 
-                if ((versionTest == fileVersionToken) && (version == fileVersionNr))
+                if (versionTest == fileVersionToken && version == fileVersionNr)
                 {
                     int count = int.Parse(reader.ReadLine());
                     for (int i = 0; i < count; i++)

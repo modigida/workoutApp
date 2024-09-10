@@ -1,13 +1,7 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assignment_7.Files;
+using Assignment_7.Managers;
 
-namespace Assignment_7
+namespace Assignment_7.HandleExercise
 {
     internal class ExerciseManager
     {
@@ -17,7 +11,7 @@ namespace Assignment_7
         {
             exerciseList = new List<Exercise>();
         }
-        public Exercise GetExerciseAt(int index) 
+        public Exercise GetExerciseAt(int index)
         {
             if (CheckIndex(index))
             {
@@ -40,7 +34,7 @@ namespace Assignment_7
         }
         private bool CheckIndex(int index)
         {
-            return (index >= 0) && (index < exerciseList.Count);
+            return index >= 0 && index < exerciseList.Count;
         }
         public bool AddExercise(Exercise ExerciseIn)
         {
@@ -55,11 +49,11 @@ namespace Assignment_7
             }
             return ok;
         }
-        
+
         public bool ChangeExerciseAt(Exercise ExerciseIn, int index)
         {
             bool ok = true;
-            if ((ExerciseIn != null) && (CheckIndex(index)))
+            if (ExerciseIn != null && CheckIndex(index))
             {
                 exerciseList[index] = ExerciseIn;
             }
@@ -72,7 +66,7 @@ namespace Assignment_7
         public bool DeleteExerciseAt(int index)
         {
             bool ok = false;
-            if ((index >= 0) && (index < exerciseList.Count))
+            if (index >= 0 && index < exerciseList.Count)
             {
                 exerciseList.RemoveAt(index);
                 ok = true;

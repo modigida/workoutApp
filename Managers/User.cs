@@ -1,11 +1,6 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assignment_7.Enums;
 
-namespace Assignment_7
+namespace Assignment_7.Managers
 {
     internal class User
     {
@@ -23,9 +18,9 @@ namespace Assignment_7
         public User(string username) : this(username, double.NaN, UnitType.KG,
             double.NaN, double.NaN, double.NaN)
         {
-       
+
         }
-        public User(string username, double bodyWeight, UnitType goalUnit, 
+        public User(string username, double bodyWeight, UnitType goalUnit,
             double goalSquat, double goalBench, double goalDeadlift)
         {
             this.username = username;
@@ -35,11 +30,11 @@ namespace Assignment_7
             this.goalBench = goalBench;
             this.goalDeadlift = goalDeadlift;
         }
-        
+
         #region PROPERTIES
         public string Username
         {
-            get { return username;}
+            get { return username; }
             set { username = value; }
         }
         public double BodyWeight
@@ -74,12 +69,12 @@ namespace Assignment_7
             if (GoalUnit == UnitType.KG)
             {
                 // benchGoal = percent
-                benchGoal = (GoalBench / BodyWeight) * 100;
+                benchGoal = GoalBench / BodyWeight * 100;
             }
             else //(user.GoalUnit == UnitType.Percent)
             {
                 // benchGoal = KG
-                benchGoal = (GoalBench / 100) * BodyWeight;
+                benchGoal = GoalBench / 100 * BodyWeight;
             }
             string strOut = benchGoal.ToString("f2");
             return strOut;
@@ -90,12 +85,12 @@ namespace Assignment_7
             if (GoalUnit == UnitType.KG)
             {
                 // squatGoal = percent
-                squatGoal = (GoalSquat / BodyWeight) * 100;
+                squatGoal = GoalSquat / BodyWeight * 100;
             }
             else //(user.GoalUnit == UnitType.Percent)
             {
                 // squatGoal = KG
-                squatGoal = (GoalSquat / 100) * BodyWeight;
+                squatGoal = GoalSquat / 100 * BodyWeight;
             }
             string strOut = squatGoal.ToString("f2");
             return strOut;
@@ -106,12 +101,12 @@ namespace Assignment_7
             if (GoalUnit == UnitType.KG)
             {
                 // user.deadliftGoal = percent
-                deadliftGoal = (GoalDeadlift / BodyWeight) * 100;
+                deadliftGoal = GoalDeadlift / BodyWeight * 100;
             }
             else //(user.GoalUnit == UnitType.Percent)
             {
                 // deadliftGoal = KG
-                deadliftGoal = (GoalDeadlift / 100) * BodyWeight;
+                deadliftGoal = GoalDeadlift / 100 * BodyWeight;
             }
             string strOut = deadliftGoal.ToString("f2");
             return strOut;

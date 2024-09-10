@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using Assignment_7.HandleExercise;
+using Assignment_7.Managers;
 
 namespace Assignment_7
 {
