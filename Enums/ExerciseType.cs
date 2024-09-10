@@ -1,6 +1,6 @@
 ﻿namespace Assignment_7.Enums
 {
-    internal enum ExerciseType
+    public enum ExerciseType
     {
         Squat,
         Bench,

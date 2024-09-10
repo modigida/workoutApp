@@ -3,7 +3,7 @@ using Assignment_7.Managers;
 
 namespace Assignment_7.HandleExercise
 {
-    internal class ExerciseManager
+    public class ExerciseManager
     {
         public List<Exercise> exerciseList;
 

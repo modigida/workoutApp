@@ -3,7 +3,7 @@ using Assignment_7.Managers;
 
 namespace Assignment_7.HandleExercise
 {
-    internal class CalculateExercise
+    public class CalculateExercise
     {
         List<Exercise> allSquats = new List<Exercise>();
         List<Exercise> allBenches = new List<Exercise>();

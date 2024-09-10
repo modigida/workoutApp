@@ -2,7 +2,7 @@
 
 namespace Assignment_7.Managers
 {
-    internal class User
+    public class User
     {
         private string username;
         private double bodyWeight;

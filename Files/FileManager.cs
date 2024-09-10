@@ -3,7 +3,7 @@ using Assignment_7.Managers;
 
 namespace Assignment_7.Files
 {
-    internal class FileManager
+    public class FileManager
     {
         private const string fileVersionToken = "ToDoRe_21";
         private const double fileVersionNr = 1.0;

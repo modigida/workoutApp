@@ -2,7 +2,7 @@
 
 namespace Assignment_7.Managers
 {
-    internal class Exercise
+    public class Exercise
     {
         private double repWeight;
         private ExerciseType type;

@@ -1,6 +1,6 @@
 ﻿namespace Assignment_7.Enums
 {
-    internal enum UnitType
+    public enum UnitType
     {
         KG,
         Percent
